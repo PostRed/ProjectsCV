@@ -1,0 +1,95 @@
+﻿<Window x:Class="Fractals.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Fractals"
+        mc:Ignorable="d"
+        Title="Фракталы" Height="630" Width="1000"
+      >
+    <Grid Margin="0,0,0,-6" Background="AntiqueWhite" Name="main">
+        <ComboBox Background="DarkOrange" Name="fractalNameChoice"  HorizontalAlignment="Left" Margin="17,64,0,0" VerticalAlignment="Top" Width="184" Height="30" SelectionChanged="FractalNameChanged">
+            <ListBoxItem Content="Фрактальное дерево 14" FontFamily="Book Antiqua" FontSize="13"/>
+            <ListBoxItem Content="Кривая Коха 7" FontFamily="Book Antiqua" FontSize="13"/>
+            <ListBoxItem Content="Ковёр Серпинского 5" FontFamily="Book Antiqua" FontSize="13"/>
+            <ListBoxItem Content="Треугольник Серпинского 7" FontFamily="Book Antiqua" FontSize="13"/>
+            <ListBoxItem Content="Множество Кантора 9" FontFamily="Book Antiqua" FontSize="13"/>
+        </ComboBox>
+        <TextBox Name="textRecursionDepth" Text="0" HorizontalAlignment="Left" Margin="17,119,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="184" Height="30" TextChanged="RecursionChanged" RenderTransformOrigin="0.513,1.088"/>
+        <Canvas Name="canvas" Margin="208,25,23,10"/>
+        <Label Content="Выберите тип фрактала" HorizontalAlignment="Left" Margin="15,10,0,0" VerticalAlignment="Top" Width="180" Height="30" Background="AntiqueWhite" Foreground="SaddleBrown" FontFamily="Book Antiqua" FontWeight="Bold" FontSize="13"/>
+        <Label Content="Введите глубину рекурсии" HorizontalAlignment="Left"  Margin="20,94,0,0" VerticalAlignment="Top" Width="180" Height="25" Background="AntiqueWhite" Foreground="SaddleBrown" FontFamily="Book Antiqua" FontWeight="Bold" FontSize="13"/>
+        <Rectangle HorizontalAlignment="Left" Height="145" Margin="15,10,0,0" Stroke="SaddleBrown" StrokeThickness="2" VerticalAlignment="Top" Width="188"/>
+        <Rectangle HorizontalAlignment="Left" Height="294" Margin="15,160,0,0" Stroke="SaddleBrown" StrokeThickness="2" VerticalAlignment="Top" Width="188"/>
+        <Label Content="Дерево Пифагора" HorizontalAlignment="Left" Margin="23,160,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Width="180" Foreground="SaddleBrown" FontFamily="Book Antiqua" FontWeight="UltraBold" FontSize="13" FontStyle="Normal" FontStretch="Condensed"/>
+        <Label  HorizontalAlignment="Left" Margin="19,191,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Width="180" Foreground="SaddleBrown" FontFamily="Book Antiqua" FontWeight="UltraBold" FontSize="13" FontStyle="Normal" Height="42">
+            <AccessText TextWrapping="WrapWithOverflow" Height="46">
+                Угол между левой веткой и основанием (в градусах).
+            </AccessText>
+        </Label>
+        <ComboBox Name ="leftAngle" HorizontalAlignment="Left" Margin="16,307,0,0" VerticalAlignment="Top" Width="184" Height="30" SelectionChanged="AngleChanged" >
+            <ComboBoxItem Content="90" FontFamily="Book Antiqua" FontSize="13"/>
+            <ComboBoxItem Content="95" FontFamily="Book Antiqua" FontSize="13"/>
+            <ComboBoxItem Content="100" FontFamily="Book Antiqua" FontSize="13"/>
+            <ComboBoxItem Content="105" FontFamily="Book Antiqua" FontSize="13"/>
+            <ComboBoxItem Content="120" FontFamily="Book Antiqua" FontSize="13"/>
+            <ComboBoxItem Content="125" FontFamily="Book Antiqua" FontSize="13"/>
+            <ComboBoxItem Content="130" FontFamily="Book Antiqua" FontSize="13"/>
+            <ComboBoxItem Content="135" FontFamily="Book Antiqua" FontSize="13" IsSelected="True"/>
+            <ComboBoxItem Content="140" FontFamily="Book Antiqua" FontSize="13"/>
+            <ComboBoxItem Content="145" FontFamily="Book Antiqua" FontSize="13"/>
+            <ComboBoxItem Content="150" FontFamily="Book Antiqua" FontSize="13"/>
+            <ComboBoxItem Content="155" FontFamily="Book Antiqua" FontSize="13"/>
+            <ComboBoxItem Content="160" FontFamily="Book Antiqua" FontSize="13"/>
+            <ComboBoxItem Content="165" FontFamily="Book Antiqua" FontSize="13"/>
+            <ComboBoxItem Content="170" FontFamily="Book Antiqua" FontSize="13"/>
+            <ComboBoxItem Content="175" FontFamily="Book Antiqua" FontSize="13"/>
+        </ComboBox>
+        <Label  HorizontalAlignment="Left" Margin="19,268,0,0" VerticalAlignment="Top" Foreground="SaddleBrown" FontFamily="Book Antiqua" FontWeight="UltraBold" FontSize="13" FontStyle="Normal" Width="180" Height="42">
+            <AccessText TextWrapping="WrapWithOverflow" Height="47" Width="180">
+                Угол между правой веткой и основанием (в градусах).
+            </AccessText>
+        </Label>
+        <ComboBox Name ="rightAngle" HorizontalAlignment="Left" Margin="16,233,0,0" VerticalAlignment="Top" Width="184" Height="30" SelectionChanged="AngleChanged">
+            <ComboBoxItem Content="90" FontFamily="Book Antiqua" FontSize="13"/>
+            <ComboBoxItem Content="95" FontFamily="Book Antiqua" FontSize="13"/>
+            <ComboBoxItem Content="100" FontFamily="Book Antiqua" FontSize="13"/>
+            <ComboBoxItem Content="105" FontFamily="Book Antiqua" FontSize="13"/>
+            <ComboBoxItem Content="120" FontFamily="Book Antiqua" FontSize="13"/>
+            <ComboBoxItem Content="125" FontFamily="Book Antiqua" FontSize="13"/>
+            <ComboBoxItem Content="130" FontFamily="Book Antiqua" FontSize="13"/>
+            <ComboBoxItem Content="135" FontFamily="Book Antiqua" FontSize="13" IsSelected="True"/>
+            <ComboBoxItem Content="140" FontFamily="Book Antiqua" FontSize="13"/>
+            <ComboBoxItem Content="145" FontFamily="Book Antiqua" FontSize="13"/>
+            <ComboBoxItem Content="150" FontFamily="Book Antiqua" FontSize="13"/>
+            <ComboBoxItem Content="155" FontFamily="Book Antiqua" FontSize="13"/>
+            <ComboBoxItem Content="160" FontFamily="Book Antiqua" FontSize="13"/>
+            <ComboBoxItem Content="165" FontFamily="Book Antiqua" FontSize="13"/>
+            <ComboBoxItem Content="170" FontFamily="Book Antiqua" FontSize="13"/>
+            <ComboBoxItem Content="175" FontFamily="Book Antiqua" FontSize="13"/>
+        </ComboBox>
+        <Label  HorizontalAlignment="Left" Margin="17,342,0,0" VerticalAlignment="Top" Foreground="SaddleBrown" FontFamily="Book Antiqua" FontWeight="UltraBold" FontSize="13" FontStyle="Normal" Width="185" Height="77">
+            <AccessText TextWrapping="WrapWithOverflow" Height="77" Width="175">
+                Отношение длины ветки к длине основания (в процентах, допустимые значения - от 0 до 70)
+            </AccessText>
+        </Label>
+        <TextBox Name="attitudeInput" HorizontalAlignment="Left" Margin="16,419,0,0" Text="70" TextWrapping="Wrap" VerticalAlignment="Top" Width="184" Height="30" SelectionChanged="AttitudeChanged"/>
+        <Rectangle HorizontalAlignment="Left" Height="122" Margin="14,459,0,0"  VerticalAlignment="Top" Width="188" Stroke="SaddleBrown" StrokeThickness="2" />
+        <Label  HorizontalAlignment="Left" Margin="17,459,0,0" VerticalAlignment="Top" Foreground="SaddleBrown" FontFamily="Book Antiqua" FontWeight="UltraBold" FontSize="13" FontStyle="Normal" Width="185" Height="33">
+            <AccessText TextWrapping="WrapWithOverflow" Height="30" Width="180">
+                Множество Кантора
+            </AccessText>
+        </Label>
+        <Label  HorizontalAlignment="Left" Margin="17,485,0,0" VerticalAlignment="Top" Foreground="SaddleBrown" FontFamily="Book Antiqua" FontWeight="UltraBold" FontSize="13" FontStyle="Normal" Width="184" Height="55">
+            <AccessText TextWrapping="WrapWithOverflow" Height="54" Width="180">
+                Расстояние между отрезками  (в пикселях от 5 до 50)
+            </AccessText>
+        </Label>
+        <TextBox Name="distance" Text="25" HorizontalAlignment="Left" Margin="16,540,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="184" Height="30" TextChanged="KantorDistantionChanged"/>
+        <Label HorizontalAlignment="Left" Margin="14,30,0,0" VerticalAlignment="Top" Width="229" Height="39">
+            <AccessText TextWrapping="WrapWithOverflow" Foreground="SaddleBrown" FontFamily="Book Antiqua" FontSize="11" Height="29" Width="207" FontWeight="UltraBold">
+                Рядом с названием - max глубина рекурсии для каждого фрактала.
+            </AccessText>
+        </Label>
+    </Grid>
+</Window>
