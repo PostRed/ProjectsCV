@@ -1,0 +1,16 @@
+C:\Users\kolom\OneDrive\Документы\programming\C#\Пиры\MatrixCalculator\peer2\obj\Debug\net5.0\peer2.csproj.AssemblyReference.cache
+C:\Users\kolom\OneDrive\Документы\programming\C#\Пиры\MatrixCalculator\peer2\obj\Debug\net5.0\peer2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kolom\OneDrive\Документы\programming\C#\Пиры\MatrixCalculator\peer2\obj\Debug\net5.0\peer2.AssemblyInfoInputs.cache
+C:\Users\kolom\OneDrive\Документы\programming\C#\Пиры\MatrixCalculator\peer2\obj\Debug\net5.0\peer2.AssemblyInfo.cs
+C:\Users\kolom\OneDrive\Документы\programming\C#\Пиры\MatrixCalculator\peer2\obj\Debug\net5.0\peer2.csproj.CoreCompileInputs.cache
+C:\Users\kolom\OneDrive\Документы\programming\C#\Пиры\MatrixCalculator\peer2\bin\Debug\net5.0\peer2.exe
+C:\Users\kolom\OneDrive\Документы\programming\C#\Пиры\MatrixCalculator\peer2\bin\Debug\net5.0\peer2.deps.json
+C:\Users\kolom\OneDrive\Документы\programming\C#\Пиры\MatrixCalculator\peer2\bin\Debug\net5.0\peer2.runtimeconfig.json
+C:\Users\kolom\OneDrive\Документы\programming\C#\Пиры\MatrixCalculator\peer2\bin\Debug\net5.0\peer2.runtimeconfig.dev.json
+C:\Users\kolom\OneDrive\Документы\programming\C#\Пиры\MatrixCalculator\peer2\bin\Debug\net5.0\peer2.dll
+C:\Users\kolom\OneDrive\Документы\programming\C#\Пиры\MatrixCalculator\peer2\bin\Debug\net5.0\ref\peer2.dll
+C:\Users\kolom\OneDrive\Документы\programming\C#\Пиры\MatrixCalculator\peer2\bin\Debug\net5.0\peer2.pdb
+C:\Users\kolom\OneDrive\Документы\programming\C#\Пиры\MatrixCalculator\peer2\obj\Debug\net5.0\peer2.dll
+C:\Users\kolom\OneDrive\Документы\programming\C#\Пиры\MatrixCalculator\peer2\obj\Debug\net5.0\ref\peer2.dll
+C:\Users\kolom\OneDrive\Документы\programming\C#\Пиры\MatrixCalculator\peer2\obj\Debug\net5.0\peer2.pdb
+C:\Users\kolom\OneDrive\Документы\programming\C#\Пиры\MatrixCalculator\peer2\obj\Debug\net5.0\peer2.genruntimeconfig.cache
